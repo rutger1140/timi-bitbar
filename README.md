@@ -6,3 +6,6 @@ A [bitbar](https://github.com/matryer/bitbar) plugin that shows running timers f
 * Add your email and [API token](https://timiapp.com/users/edit)
 * Give the script excutable permissions using `chmod +x timi.30s.php`
 * Reload BitBar by opening it and using `⌘+R`
+
+## Screenshot
+![Timi bitbar screenshot](https://raw.githubusercontent.com/lekkerduidelijk/timi-bitbar/master/screenshot.png)

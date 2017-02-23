@@ -129,7 +129,7 @@ if($hasRunningTimer) {
 
 } else {
 
-  echo "Timi: 0:00\n";
+  echo "Timi: -:--\n";
   echo "---\n";
   echo "Timer niet actief\n";
 }

@@ -134,7 +134,7 @@ if($hasRunningTimer) {
   echo "Timer niet actief\n";
 }
 
-echo "Vandaag: $hoursToday uur\n";
+echo "Vandaag: $hoursToday uur| href=https://timiapp.com/time_entries?date=$TODAY\n";
 echo "---\n";
 echo "Open Timi| href=https://timiapp.com\n";
 echo "---";

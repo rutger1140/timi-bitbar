@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 # <bitbar.title>TimiApp</bitbar.title>
-# <bitbar.version>v1.3</bitbar.version>
+# <bitbar.version>v1.4</bitbar.version>
 # <bitbar.author>Rutger Laurman</bitbar.author>
 # <bitbar.author.github>lekkerduidelijk</bitbar.author.github>
 # <bitbar.desc>Show running timers from timiapp.com.</bitbar.desc>

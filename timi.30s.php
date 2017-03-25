@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 # <bitbar.title>TimiApp</bitbar.title>
-# <bitbar.version>v1.4</bitbar.version>
+# <bitbar.version>v1.5</bitbar.version>
 # <bitbar.author>Rutger Laurman</bitbar.author>
 # <bitbar.author.github>lekkerduidelijk</bitbar.author.github>
 # <bitbar.desc>Show running timers from timiapp.com.</bitbar.desc>
@@ -34,7 +34,11 @@ function doCurl($url) {
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   $output = curl_exec($ch);
   curl_close($ch);
-  return json_decode($output);
+  if(!$output) {
+    return false;
+  } else {
+    return json_decode($output);
+  }
 }
 
 // =============================================================================
@@ -52,6 +56,11 @@ $apiAuth = "email=" . $EMAIL . "&token=" . $TOKEN;
 $TODAY = date("Y-m-d");
 $URL = $apiEndpoint . "time_entries.json?" . $apiAuth . "&date=" . $TODAY;
 $outputToday = doCurl($URL);
+
+// Check for connection
+if($outputToday === false) {
+  die("Timi: Connection failed, no internet?");
+}
 
 // Process data
 $timeToday = $outputToday->time_entries;

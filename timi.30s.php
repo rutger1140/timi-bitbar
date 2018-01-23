@@ -59,7 +59,10 @@ $outputToday = doCurl($URL);
 
 // Check for connection
 if($outputToday === false) {
-  die("Timi: Connection failed, no internet?");
+  echo "Timi: ?:?? 💥\n";
+  echo "---\n";
+  echo "No internet connection\n";
+  die();
 }
 
 // Process data
